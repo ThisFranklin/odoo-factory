@@ -7,9 +7,10 @@
 
 ```
 # Odoo env variables
-HOST=db
-USER=odoo
-PASSWORD=odoo
+
+HOST=db  // The address of the postgres server. If you used a postgres container, set to the name of the container. Defaults to db.
+USER=odoo  // The postgres role with which Odoo will connect. If you used a postgres container, set to the same value as POSTGRES_USER. Defaults to odoo.
+PASSWORD=odoo  // The password of the postgres role with which Odoo will connect. If you used a postgres container, set to the same value as POSTGRES_PASSWORD. Defaults to odoo.
 
 # Postgres env variables
 POSTGRES_DB=postgres
