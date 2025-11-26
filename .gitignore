@@ -1,0 +1,8 @@
+.env
+postgres_db/
+odoo/
+*/__pycache__
+
+
+
+

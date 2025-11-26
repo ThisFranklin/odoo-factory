@@ -1,0 +1,35 @@
+name: odoo-webapp
+services:
+  web:
+    image: odoo:18.0
+    container_name: odoo
+    restart: always
+    networks:
+      - odoo_network
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "8069:8069"
+    volumes:
+    # The ./odoo/server volume is where Odoo will store data that'll be uploaded
+    # by users, such as images, PDF files, etc...
+      - ./odoo/server:/var/lib/odoo 
+      - ./odoo/config:/etc/odoo
+      - ./odoo/addons:/mnt/extra-addons
+
+  db:
+    image: postgres:17-alpine
+    container_name: database
+    restart: always
+    networks:
+      - odoo_network
+    env_file:
+      - .env
+    volumes:
+      - ./postgres_db:/var/lib/postgresql/data
+
+networks:
+  odoo_network:
+    driver: bridge
