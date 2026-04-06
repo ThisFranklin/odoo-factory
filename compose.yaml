@@ -28,7 +28,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./postgres_db:/var/lib/postgresql/data
+      - ./postgres_db/data:/var/lib/postgresql/data
 
 networks:
   odoo_network:
