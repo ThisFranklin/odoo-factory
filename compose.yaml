@@ -30,6 +30,14 @@ services:
     volumes:
       - ./postgres_db:/var/lib/postgresql
 
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    networks:
+      - odoo_network
+    ports:
+      - 8080:8080
 networks:
   odoo_network:
     driver: bridge
