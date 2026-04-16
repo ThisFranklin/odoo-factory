@@ -1,7 +1,8 @@
 .env
 postgres_db/
-odoo/
-*/__pycache__
+odoo/core-addons
+odoo/server
+**/__pycache__
 
 
 
