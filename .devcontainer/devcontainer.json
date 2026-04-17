@@ -1,0 +1,18 @@
+{
+  "name": "Odoo Development",
+  "dockerComposeFile": [
+    "../compose.yaml"
+  ],
+  "service": "web", // Name of your Odoo service in compose.yaml
+  "workspaceFolder": "/workspace", // Path where your code is mounted in the container
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "odoo.odoo"
+      ]
+    }
+  },
+
+  "remoteUser": "root"
+}

@@ -1,0 +1,13 @@
+{
+  //"Odoo.serverConfigPath": "../odoo/config",
+  "Odoo.selectedProfile": "default",
+  "Odoo.serverLogLevel": "info",
+  "odooServer.trace.server": "off",
+  "Odoo.disablePythonLanguageServerPopup": false,
+  "python.analysis.extraPaths": [
+    //"/Users/mac/odoo-18.0",
+    //"../odoo/addons/" // Your custom modules path
+  ],
+  "postman.settings.dotenv-detection-notification-visibility": false,
+  //"python-envs.defaultEnvManager": "ms-python.python:system"
+}
