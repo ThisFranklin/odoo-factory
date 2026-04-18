@@ -1,7 +1,7 @@
 name: odoo-webapp
 services:
   web:
-    image: odoo:18.0
+    image: thisfranklin/odoo:18.0
     container_name: odoo
     restart: always
     networks:
@@ -20,7 +20,7 @@ services:
       - ./odoo/addons:/mnt/extra-addons
 
   db:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     container_name: database
     restart: always
     networks:
@@ -29,6 +29,14 @@ services:
       - .env
     volumes:
       - ./postgres_db:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      - odoo_network
+    ports:
+      - 8080:8080
 
 networks:
   odoo_network:
