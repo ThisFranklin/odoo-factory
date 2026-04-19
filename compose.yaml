@@ -18,6 +18,7 @@ services:
       - ./odoo/server:/var/lib/odoo 
       - ./odoo/config:/etc/odoo
       - ./odoo/addons:/mnt/extra-addons
+      - ./:/workspace
 
   db:
     image: postgres:18-alpine
@@ -28,7 +29,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./postgres_db:/var/lib/postgresql/data
+      - ./postgres_db:/var/lib/postgresql
 
   adminer:
     image: adminer
