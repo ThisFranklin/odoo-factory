@@ -9,6 +9,7 @@
                 "ms-python.python",
                 "odoo.odoo",
                 "eamodio.gitlens",
+                "mhutchie.git-graph",
                 "wayou.vscode-todo-highlight",
                 "mechatroner.rainbow-csv"
             ]
